@@ -1,38 +1,41 @@
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e9cf24;
+    background-color: #f3e6b2; /* Lightened background for a softer feel */
 }
 
 header {
-    background-color: #dd4f4f;
-    color: #fcdf07;
-    padding: 10px 0;
+    background-color: #c14444; /* Slightly darker shade for better contrast */
+    color: #ffeb00; /* Bright yellow text for high contrast */
+    padding: 20px 0; /* More padding for better spacing */
     text-align: center;
+    font-size: 1.5rem; /* Increased font size for emphasis */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* Center align the nav items */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: inline-block;
+    margin-right: 15px; /* Increased margin for better spacing */
 }
 
 nav ul li a {
-    color: rgb(232, 206, 63);
+    color: #f4d35e; /* Lighter color for the nav links */
     text-decoration: none;
+    font-size: 1.2rem; /* Slightly larger font for readability */
 }
 
 #about-us {
     text-align: center;
-    margin: 20px 0;
-    color: #dd4f4f;
-    text-decoration: solid;
-    
+    margin: 40px 0; /* Larger margin for breathing space */
+    color: #c14444; /* Darker red for contrast */
+    font-size: 1.8rem; /* Larger font size for emphasis */
+    text-decoration: none;
 }
 
 #meats {
@@ -41,7 +44,6 @@ nav ul li a {
     justify-content: space-around;
     margin: 20px;
     color: #090909;
-
 }
 
 #meats div {
@@ -51,79 +53,92 @@ nav ul li a {
     background-color: #fa8455;
     margin-bottom: 20px;
     border-radius: 10%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s;
     transform: scale(1.00);
-    /* Slight zoom effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-    /* Deeper shadow on hover */
+}
+
+#meats div:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
 #meats img {
-    width: 150px;
-    height: 150px;
-    object-fit:cover;
+    width: 180px; /* Slightly increased size */
+    height: 180px;
+    object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s;
 }
 
 .delete-btn, .edit-btn {
-    background-color: red;
+    background-color: #c14444; /* Matches the header color */
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 15px; /* Larger padding for better touch targets */
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px; /* Rounded buttons */
 }
 
 .edit-btn {
-    background-color: orange;
+    background-color: #f69a0b; /* More distinct color for edit */
+}
+
+.delete-btn:hover, .edit-btn:hover {
+    opacity: 0.9; /* Slight hover effect */
 }
 
 #meats-actions {
     text-align: center;
-    margin: 20px;
+    margin: 40px; /* Increased margin for spacing */
 }
 
 #meats-actions form {
     display: inline-block;
     text-align: left;
     margin-bottom: 20px;
+    width: 300px; /* Fixed width for better alignment */
 }
 
 #meats-actions input {
     padding: 10px;
     margin-bottom: 10px;
     width: 100%;
+    border-radius: 5px; /* Rounded input fields */
+    border: 1px solid #ccc;
 }
 
 #meats-actions button {
-    background-color: green;
+    background-color: #28a745; /* Green button for clear action */
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Rounded submit button */
 }
 
 #search-meat {
     padding: 10px;
-    width: 200px;
+    width: 250px; /* Increased width for search box */
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 #contactus {
-    position:relative;
+    position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #dd4f4f;
+    background-color: #c14444;
     color: white;
-    padding: 20px;
+    padding: 30px; /* More padding for better spacing */
     text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
 }
 
 #contactus form {
     display: inline-block;
     text-align: left;
+    width: 300px; /* Fixed width for better form alignment */
 }
 
 #contactus input, #contactus textarea {
@@ -131,12 +146,14 @@ nav ul li a {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded input and textarea */
 }
 
 #contactus button {
-    background-color: #f6940b;
+    background-color: #f69a0b; /* Orange button for form submit */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px; /* Rounded form button */
 }

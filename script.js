@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
+        fetchMeatsFromServer();  // Fetch from the server when the page loads
+    });
+    
     let meats = [
         { id: 1, name: 'Beef', img: 'IMAGES/BEEF BUTCHERY.jpeg' },
         { id: 2, name: 'Chicken', img: 'IMAGES/CHICKEN BUTCHERY.jpg' },
@@ -49,6 +53,23 @@ document.addEventListener('DOMContentLoaded', () => {
         meats.push(newMeat);
         renderMeats(meats);
         addMeatForm.reset();
+        addMeatForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const meatName = document.getElementById('meat-name').value;
+            const meatImg = document.getElementById('meat-img').value;
+            const newMeat = {
+                id: meats.length + 1, 
+                name: meatName,
+                img: meatImg
+            };
+        
+            meats.push(newMeat);  // Add to the local meats array
+            renderMeats(meats);   // Re-render the meats
+            addMeatForm.reset();   // Reset the form
+            
+            addMeatToServer(newMeat);  // Send the new meat to the server
+        });
+        
     });
 
     // Search meat
@@ -83,4 +104,38 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset form
         orderForm.reset();
     });
+    // Fetch meats from the server and integrate with existing functionality
+const fetchMeatsFromServer = () => {
+    fetch('http://localhost:3000/meats')  // Adjust the URL to your server
+        .then(response => response.json())
+        .then(data => {
+            // Assuming 'data' is an array of meats, replace local meats array with fetched meats
+            meats = data;  // Update the local meats array
+            renderMeats(meats);  // Render the meats using your existing function
+        })
+        .catch(error => console.error('Error fetching meats:', error));
+};
+
+// Example: Call fetchMeatsFromServer to load meats from server after the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    fetchMeatsFromServer();
+});
+
+// Optional: Add new meat to the server when it's added locally
+const addMeatToServer = (newMeat) => {
+    fetch('http://localhost:3000/meats', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newMeat)
+    })
+    .then(response => response.json())
+    .then(data => {
+        meats.push(data);  // Push newly added meat from server
+        renderMeats(meats);  // Re-render the meats
+    })
+    .catch(error => console.error('Error adding meat to server:', error));
+};
+
+// Example: Call addMeatToServer inside the existing form submit function
+
 });
