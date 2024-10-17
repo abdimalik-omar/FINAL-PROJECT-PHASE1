@@ -1,0 +1,142 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9cf24;
+}
+
+header {
+    background-color: #dd4f4f;
+    color: #fcdf07;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: rgb(232, 206, 63);
+    text-decoration: none;
+}
+
+#about-us {
+    text-align: center;
+    margin: 20px 0;
+    color: #dd4f4f;
+    text-decoration: solid;
+    
+}
+
+#meats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    color: #090909;
+
+}
+
+#meats div {
+    border: 1px solid #8f5606;
+    padding: 20px;
+    text-align: center;
+    background-color: #fa8455;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s;
+    transform: scale(1.00);
+    /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    /* Deeper shadow on hover */
+}
+
+#meats img {
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s;
+}
+
+.delete-btn, .edit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: orange;
+}
+
+#meats-actions {
+    text-align: center;
+    margin: 20px;
+}
+
+#meats-actions form {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#meats-actions input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#meats-actions button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#search-meat {
+    padding: 10px;
+    width: 200px;
+}
+
+#contactus {
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #dd4f4f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#contactus form {
+    display: inline-block;
+    text-align: left;
+}
+
+#contactus input, #contactus textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#contactus button {
+    background-color: #f6940b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meaty Meats (Halal)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meaty Meats (Halal)</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Beef</a></li>
+                <li><a href="#">Chicken</a></li>
+                <li><a href="#">Seafood</a></li>
+                <li><a href="#">Lamb</a></li>
+                <li><a href="#">Goat</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+                <label for="search-meat">Search Meats:</label>
+                <input type="text" id="search-meat" placeholder="Search...">
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <img src="IMAGES/BUTCHERY MAIN 2.jpg" alt="About Us Image">
+        <p>We provide fresh and halal meat for all your needs. Order your favorite meats below!</p>
+    </section>
+
+    <section id="meats-actions">
+        <h2>Manage Meats</h2>
+        <form id="add-meat-form">
+            <label for="meat-name">Meat Name:</label>
+            <input type="text" id="meat-name" name="meat-name" required>
+            
+            <label for="meat-img">Meat Image URL:</label>
+            <input type="text" id="meat-img" name="meat-img" required>
+            
+            <button type="submit">Add Meat</button>
+        </form>
+
+    </section>
+
+    <section id="meats">
+        <!-- Meat items will be rendered here -->
+    </section>
+
+    <section id="contactus">
+        <h2>Contact Us</h2>
+        <form id="order-form">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="description">Order Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

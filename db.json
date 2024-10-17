@@ -1,0 +1,28 @@
+{
+  "meats": [
+    {
+      "id": "1",
+      "type": null,
+      "description": null,
+      "image": null
+    },
+    {
+      "id": "3",
+      "type": "Beef",
+      "description": "Fresh Beef",
+      "image": "IMAGES/BEEF BUTCHERY.jpg"
+    },
+    {
+      "id": "4",
+      "type": "Goat",
+      "description": "Fresh goat",
+      "image": "goat.jpg"
+    },
+    {
+      "id": "decf",
+      "type": "chicekn",
+      "description": "dcdcaddc",
+      "image": "cscaD"
+    }
+  ]
+}
